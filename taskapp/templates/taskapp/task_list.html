@@ -1,1 +1,10 @@
-<h1>hello</h1>
+<h1>Task_manage</h1>
+
+<div>
+    {% for task in task_list %}
+    <div>
+        {{ task.content }}
+        {{ task.posted_date }}
+    </div>
+    {% endfor %}
+</div>
