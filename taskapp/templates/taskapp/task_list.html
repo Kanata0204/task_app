@@ -1,4 +1,5 @@
-<h1>Task_manage</h1>
+{% extends 'base.html' %}
+{% block body %}
 
 <div>
     {% for task in task_list %}
@@ -8,3 +9,5 @@
     </div>
     {% endfor %}
 </div>
+
+{% endblock %}
