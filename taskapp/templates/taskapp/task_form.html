@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/task_form.css' %}">
+{% endblock %}
+
 {% block title %}タスク作成{% endblock  %}
 
 {% block body %}

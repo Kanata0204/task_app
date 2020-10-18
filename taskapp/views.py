@@ -2,6 +2,7 @@ from django.urls import reverse_lazy
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import Task
+from .forms import TaskForm
 
 # Create your views here.
 class TaskListView(ListView):
@@ -12,13 +13,13 @@ class TaskDetailView(DetailView):
 
 class TaskCreateView(CreateView):
     model = Task
-    # 例え、id=1, content = ...のような悪意のあるフォームが送られても無視できる
-    fields = ["content", ]
+    form_class = TaskForm
+
     success_url = reverse_lazy("list")
 
 class TaskUpdateView(UpdateView):
     model = Task
-    fields = ["content", ]
+    form_class = TaskForm
 
     def get_success_url(self):
         # pk取得
