@@ -1,16 +1,26 @@
-<!DOCTYPE html>
+{% load static %}
+
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task_application</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>タスク管理アプリ</title>
+    {% block custom_css %}
+    {% endblock  %}
 </head>
-<body>
-    <h1>Task_management</h1>
 
-    {% block body %}
-        
-    {% endblock %}
-    
+<body>
+    <header>
+        <h1 class="title">{% block title %}{% endblock %}</h1>
+    </header>
+
+    <div class="content">
+        {% block body %}
+
+        {% endblock %}
+    </div>
 </body>
+
 </html>

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    font-family: "Zapfino", "Segoe Script", "Arial", "ＭＳ 明朝", "MS Mincho", "ヒラギノ角ゴシック", "Hiragino Sans", "Zapfino", sans-serif;
+    font-size: 62.5%;
+}
+
+a {
+    color: black;
+}
+
+.content {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5%;
+    font-size: 5rem;
+}
+
+header {
+    position: relative;
+    height: 12rem;
+    background-image: url(../img/bush.png);
+}
+
+header h1 {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    font-size: 5rem;
+}
