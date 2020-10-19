@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}削除確認{% endblock  %}
+
+{% block body %}
+    <p>本当に削除してよろしいですか？</p>
+    <form action="#" method="post">{% csrf_token %}
+        {{ form }}
+        <button type="submit">yes</button>
+        <a href="{% url 'list' %}">キャンセル</a>
+    </form>
+{% endblock  %}
