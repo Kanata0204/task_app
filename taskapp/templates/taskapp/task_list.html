@@ -11,7 +11,7 @@
 
 {% for task in task_list %}
     <div class="task">
-       <a href="#">{{ task.content }}</a></br>
+       <a href="{% url 'detail' task.pk %}">{{ task.content }}</a></br>
         <p>{{ task.posted_date }}</p>
     </div>
 {% endfor %}
