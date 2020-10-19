@@ -9,7 +9,9 @@
 
 {% block body %}
 
-{% for task in task_list %}
+<a href="{% url 'create' %}"><button>new</button></a>
+
+{% for task in tasks %}
     <div class="task">
        <a href="{% url 'detail' task.pk %}">{{ task.content }}</a></br>
         <p>{{ task.posted_date }}</p>
