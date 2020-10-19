@@ -9,13 +9,30 @@
 
 {% block body %}
 
-<a href="{% url 'create' %}"><button>new</button></a>
+    <a href="{% url 'create' %}"><button>new</button></a>
 
-{% for task in tasks %}
-    <div class="task">
-       <a href="{% url 'detail' task.pk %}">{{ task.content }}</a></br>
-        <p>{{ task.posted_date }}</p>
-    </div>
-{% endfor %}
+    {% for task in tasks %}
+        <div class="task">
+        <a href="{% url 'detail' task.pk %}">{{ task.content }}</a></br>
+            <p>{{ task.posted_date }}</p>
+        </div>
+    {% endfor %}
+
+    <nav class="page_navigation">
+        <ul style="display: flex;">
+            <li>
+                <a href="#" class="previous"><button>&laquo;</button></a>
+            </li>
+
+            {% for page in paginator.page_range %}
+                <li{% if page == page_obj.number %} class="active" {% endif %}><a href="?page={{ page }}">{{ page }}</a></li>
+            {% endfor %}
+
+            <li>
+                <a href="#" class="next"><button>&raquo;</button></a>
+            </li>
+        </ul>
+    </nav>
+
 
 {% endblock %}
