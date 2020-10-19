@@ -10,4 +10,3 @@ class TaskForm(forms.ModelForm):
         model = Task
         # 例え、id=1, content = ...のような悪意のあるフォームが送られても無視できる
         fields = ["content", ]
-    pass

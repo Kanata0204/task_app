@@ -1,6 +1,6 @@
 from django.urls import reverse_lazy
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Task
 from .forms import TaskForm
 
@@ -27,3 +27,7 @@ class TaskUpdateView(UpdateView):
         # task_pkのdetailへアクセス
         url = reverse_lazy("detail", kwargs={"pk":task_pk})
         return url
+
+class TaskDeleteView(DeleteView):
+    model = Task
+    success_url = reverse_lazy("list")

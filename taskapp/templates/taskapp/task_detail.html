@@ -5,6 +5,8 @@
 <div>
     <h2>{{ task.content }}</h2>
     <p>{{ task.posted_date|date:"Y/m/d H:i" }}</p>
+    <a href="{% url 'update' task.id %}">edit</a>
+    <a href="{% url 'delete' task.id %}">delete</a>
 </div>
 
 {% endblock %}
