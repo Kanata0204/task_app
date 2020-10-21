@@ -5,11 +5,13 @@
     <link rel="stylesheet" href="{% static 'css/task_list.css' %}">
 {% endblock %}
 
-{% block title %}タスクリスト{% endblock  %}
+{% block title %}タスクリスト{% endblock %}
 
 {% block body %}
 
-    <a href="{% url 'create' %}"><button>new</button></a>
+    {% if user.is_authenticated %}
+        <a href="{% url 'create' %}"><button>new</button></a>
+    {% endif %}
 
     {% for task in tasks %}
         <div class="task">

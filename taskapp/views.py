@@ -1,4 +1,4 @@
-from django.http import request
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -15,11 +15,13 @@ class TaskDetailView(DetailView):
     model = Task
     context_object_name = "task"
 
-class TaskCreateView(CreateView):
+class TaskCreateView(LoginRequiredMixin, CreateView):
     template_name = "taskapp/task_create_form.html"
     model = Task
     form_class = TaskForm
     success_url = reverse_lazy("list")
+
+    login_url = '/login'
 
     # 正しく作成できた時
     def form_valid(self, form):
@@ -30,10 +32,13 @@ class TaskCreateView(CreateView):
         messages.error(self.request, "保存できませんでした")
         return super().form_invalid(form)
 
-class TaskUpdateView(UpdateView):
+class TaskUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "taskapp/task_update_form.html"
     model = Task
     form_class = TaskForm
+
+    # ログインしていないユーザが編集しようとすると強制的にリダイレクトさせる
+    login_url = '/login'
 
     def get_success_url(self):
         # pk取得
@@ -50,9 +55,11 @@ class TaskUpdateView(UpdateView):
         messages.error(self.request, "問題により更新できませんでした")
         return super().form_invalid(form)
 
-class TaskDeleteView(DeleteView):
+class TaskDeleteView(LoginRequiredMixin, DeleteView):
     model = Task
     success_url = reverse_lazy("list")
+
+    login_url = '/login'
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, "削除しました")

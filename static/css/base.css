@@ -10,7 +10,10 @@ li {
 
 a {
     color: black;
+    display: inline-block;
+    text-decoration: none;
 }
+
 
 .content {
     width: 70%;
@@ -25,9 +28,25 @@ header {
     background-image: url(../img/bush.png);
 }
 
-header h1 {
+header .title {
     position: absolute;
     top: 15%;
     left: 8%;
     font-size: 5rem;
+}
+
+.btn {
+    display: inline-block;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1% 2%;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+header .btn{
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    background-color: blue;
 }
