@@ -1,6 +1,8 @@
 * {
+    box-sizing: border-box;
     margin: 0;
-    font-family: "Zapfino", "Segoe Script", "Arial", "ＭＳ 明朝", "MS Mincho", "ヒラギノ角ゴシック", "Hiragino Sans", "Zapfino", sans-serif;
+    padding: 0;
+    /* font-family: "Zapfino", "Segoe Script", "Arial", "ＭＳ 明朝", "MS Mincho", "ヒラギノ角ゴシック", "Hiragino Sans", "Zapfino", sans-serif; */
     font-size: 62.5%;
 }
 
@@ -23,16 +25,17 @@ a {
 }
 
 header {
-    position: relative;
-    height: 12rem;
-    background-image: url(../img/bush.png);
+    padding: 20px 3%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
 }
 
-header .title {
-    position: absolute;
-    top: 15%;
-    left: 8%;
-    font-size: 5rem;
+header #main-title {
+    font-size: 2rem;
 }
 
 .btn {
