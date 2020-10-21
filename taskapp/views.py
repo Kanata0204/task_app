@@ -9,7 +9,7 @@ from .forms import TaskForm
 class TaskListView(ListView):
     model = Task
     context_object_name = "tasks"
-    paginate_by = 3
+    paginate_by = 5
 
 class TaskDetailView(DetailView):
     model = Task
