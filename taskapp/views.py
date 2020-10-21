@@ -1,11 +1,14 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib import messages
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from .models import Task
 from .forms import TaskForm
 
 # Create your views here.
+class TaskIndexView(TemplateView):
+    template_name = "index.html"
+
 class TaskListView(ListView):
     model = Task
     context_object_name = "tasks"
