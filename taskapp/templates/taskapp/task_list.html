@@ -20,17 +20,22 @@
 
     <nav class="page_navigation">
         <ul style="display: flex;">
-            <li>
-                <a href="#" class="previous"><button>&laquo;</button></a>
-            </li>
+
+            {% if page_obj.has_previous %}
+                <li>
+                    <a href="?page={{ page_obj.previous_page_number }}" class="previous"><button>&laquo;</button></a>
+                </li>
+            {% endif %}
 
             {% for page in paginator.page_range %}
                 <li{% if page == page_obj.number %} class="active" {% endif %}><a href="?page={{ page }}">{{ page }}</a></li>
             {% endfor %}
 
-            <li>
-                <a href="#" class="next"><button>&raquo;</button></a>
-            </li>
+            {% if page_obj.has_next %}
+                <li>
+                    <a href="?page={{ page_obj.next_page_number }}" class="next"><button>&raquo;</button></a>
+                </li>
+            {% endif %}
         </ul>
     </nav>
 
