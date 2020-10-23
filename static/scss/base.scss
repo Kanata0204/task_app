@@ -1,0 +1,65 @@
+// <プロパティ 順番>
+// 視覚整形->視覚効果->ボックスモデル->背景->画像->色->フォント、
+// テキスト->マルチカラム->生成コンテンツ、リスト->ユーザーインターフェース->アニメーション->音声
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    // font-size: 62.5%;
+    // font-family: "Zapfino", "Segoe Script", "Arial", "ＭＳ 明朝", "MS Mincho", "ヒラギノ角ゴシック", "Hiragino Sans", "Zapfino", sans-serif;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 1%;
+    color: white;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+#content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 85px;
+    // font-size: 5rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5% 15px;
+    border-bottom: 1px solid rgb(77, 68, 68);
+    background-color: black;
+
+    & #main-title{
+        color: white;
+    }
+
+    & #login-btn{
+        // padding: 5px 3px;
+        display: inline-block;
+        margin-right: 20px;
+        background-color: rgb(241, 31, 31);
+        border-radius: 5%;
+    }
+}
+
