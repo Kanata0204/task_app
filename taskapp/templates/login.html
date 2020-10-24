@@ -14,9 +14,8 @@
     <table>
         {{ form }}
     </table>
-    {{ next }}
-
-    <input type="hidden" name="next" value="{% if next == '/' %}task_list/{% else %}{{ next }}{% endif %}"></input>
+    {% if request.path == 'login' %}{% endif %}
+    <input type="hidden" name="next" value="{{ next }}"></input>
     <button class="btn" type="submit">ログイン</button>
 
     </form>
