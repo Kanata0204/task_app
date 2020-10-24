@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block custom_css %}
-    <link rel="stylesheet" href="{% static 'css/task_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/taskapp/task_list.css' %}">
 {% endblock %}
 
 {% block title %}タスクリスト{% endblock %}
 
-{% block body %}
+{% block container %}
 
     {% if user.is_authenticated %}
         <a href="{% url 'create' %}"><button>new</button></a>

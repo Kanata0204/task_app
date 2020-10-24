@@ -1,0 +1,14 @@
+.task {
+  padding: 3%;
+  border-top: 1px solid #b19f9f;
+}
+
+.page_navigation li {
+  font-size: 3em;
+  padding-right: 8px;
+}
+
+.active a {
+  color: purple;
+  cursor: default;
+}
