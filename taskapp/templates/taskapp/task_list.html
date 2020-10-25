@@ -15,8 +15,8 @@
 
     {% for task in tasks %}
         <div class="task">
-        <a href="{% url 'detail' task.pk %}">{{ task.content }}</a></br>
-            <p>{{ task.posted_date }}</p>
+        <a href="{% url 'detail' task.pk %}">{{ task.title }}</a></br>
+            <p>{{ task.time_limit }}</p>
         </div>
     {% endfor %}
 

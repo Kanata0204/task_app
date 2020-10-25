@@ -6,13 +6,13 @@
 <link rel="stylesheet" href="{% static 'css/task_form.css' %}">
 {% endblock %}
 
-{% block title %}タスク作成{% endblock  %}
+{% comment %} {% block title %}タスク作成{% endblock  %} {% endcomment %}
 
-{% block body %}
+{% block container %}
 <form action="#" method="POST">{% csrf_token %}
     <table class="table">
         {{ form }}
     </table>
     <button class="btn" type="submit">作成</button>
 </form>
-{% endblock  %}
+{% endblock %}
