@@ -20,16 +20,18 @@ a {
 
 .btn {
   display: inline-block;
-  padding: 10px 1%;
+  padding: 5px 15px;
   color: white;
+  font-size: 16px;
   border-radius: 5%;
+  border-style: none;
   cursor: pointer;
 }
 
 #content {
   width: 80%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 84px;
 }
 
 header {
@@ -49,8 +51,6 @@ header #main-title {
 }
 
 header #login-btn {
-  display: inline-block;
   margin-right: 20px;
   background-color: #f11f1f;
-  border-radius: 5%;
 }
