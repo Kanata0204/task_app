@@ -1,0 +1,50 @@
+#content{
+    // text-align: center;
+
+    & form{
+        padding: 5% 0;
+        margin: 0 auto;
+        margin-top: 10%;
+        // border: 1px solid black;
+        border-radius: 3%;
+        // background-color: rgb(223, 223, 222);
+
+
+        & .table{
+            margin: 0 auto;
+            text-align: center;
+
+            & tbody{
+                
+                & tr{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 5%;
+
+                    & th{
+                        font-size: 2rem;
+                    }
+                }
+                & td{
+                    // padding: 10px;
+                }
+            }
+        }
+        & .btn_block{
+            display: flex;
+            justify-content: space-between;
+            // widthはテーブルが固定の幅のため387px固定
+            width: 387px;
+            margin: 0 auto;
+
+            & #back_btn{
+                background-color: black;
+            }
+
+            & #create_btn{
+                background-color: red;
+            }
+        }
+    }
+}
+

@@ -9,7 +9,7 @@
         <a href="{% url 'update' task.id %}">edit</a>
         <a href="{% url 'delete' task.id %}">delete</a>
     {% endif %}
-    <button><a href="{% url "list" %}">戻る</a></buttom>
+    <a href="{% url "list" %}">戻る</a>
 </div>
 
 {% endblock %}

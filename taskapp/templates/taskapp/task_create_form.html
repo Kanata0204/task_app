@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block custom_css %}
-<link rel="stylesheet" href="{% static 'css/task_form.css' %}">
+<link rel="stylesheet" href="{% static 'css/taskapp/task_form.css' %}">
 {% endblock %}
 
 {% comment %} {% block title %}タスク作成{% endblock  %} {% endcomment %}
@@ -13,6 +13,9 @@
     <table class="table">
         {{ form }}
     </table>
-    <button class="btn" type="submit">作成</button>
+    <div class="btn_block">
+        <a id="back_btn" class="btn" href="{% url 'list' %}">戻る</a>
+        <button id="create_btn" class="btn" type="submit">作成</button>
+    </div>
 </form>
 {% endblock %}

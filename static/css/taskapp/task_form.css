@@ -1,0 +1,36 @@
+#content form {
+  padding: 5% 0;
+  margin: 0 auto;
+  margin-top: 10%;
+  border-radius: 3%;
+}
+
+#content form .table {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#content form .table tbody tr {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+#content form .table tbody tr th {
+  font-size: 2rem;
+}
+
+#content form .btn_block {
+  display: flex;
+  justify-content: space-between;
+  width: 387px;
+  margin: 0 auto;
+}
+
+#content form .btn_block #back_btn {
+  background-color: black;
+}
+
+#content form .btn_block #create_btn {
+  background-color: red;
+}
