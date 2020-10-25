@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block body %}
+{% block container %}
 
 <div>
-    <h2>{{ task.content }}</h2>
-    <p>{{ task.posted_date|date:"Y/m/d H:i" }}</p>
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.time_limit|date:"Y/m/d H:i" }}</p>
     {% if user.is_authenticated %}
         <a href="{% url 'update' task.id %}">edit</a>
         <a href="{% url 'delete' task.id %}">delete</a>
