@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
+{% extends '_base.html' %}
 
 {% block title %}削除確認{% endblock  %}
 
-{% block body %}
+{% block container %}
     <p>本当に削除してよろしいですか？</p>
     <form action="#" method="post">{% csrf_token %}
         {{ form }}
