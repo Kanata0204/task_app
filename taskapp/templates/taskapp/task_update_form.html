@@ -3,16 +3,17 @@
 {% load static %}
 
 {% block custom_css %}
-<link rel="stylesheet" href="{% static 'css/task_form.css' %}">
+<link rel="stylesheet" href="{% static 'css/taskapp/task_form.css' %}">
 {% endblock %}
-
-{% block title %}タスク編集{% endblock  %}
 
 {% block container %}
 <form action="#" method="POST">{% csrf_token %}
     <table class="table">
         {{ form }}
     </table>
-    <button class="btn" type="submit">保存</button>
+    <div class="btn_block">
+        <a id="back_btn" class="btn" href="{% url 'list' %}">戻る</a>
+        <button id="update_btn" class="btn" type="submit">更新</button>
+    </div>
 </form>
 {% endblock  %}

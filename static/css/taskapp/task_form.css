@@ -34,3 +34,7 @@
 #content form .btn_block #create_btn {
   background-color: red;
 }
+
+#content form .btn_block #update_btn {
+  background-color: red;
+}
