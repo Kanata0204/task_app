@@ -40,25 +40,3 @@ a {
     margin-top: 84px;
     // font-size: 5rem;
 }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 5% 15px;
-    border-bottom: 1px solid rgb(77, 68, 68);
-    background-color: black;
-
-    & #main-title{
-        color: white;
-    }
-
-    & #login-btn{
-        margin-right: 20px;
-        background-color: rgb(241, 31, 31);
-    }
-}
-
