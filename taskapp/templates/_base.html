@@ -18,6 +18,8 @@
     {% endblock  %}
 
     <div id="content">
+        {% block title %}{% endblock %}
+
         {% if messages %}
             <ul>
                 {% for message in messages %}
