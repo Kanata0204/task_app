@@ -11,7 +11,6 @@
     & #index{
         &_title{
         padding: 8% 0;
-        text-align: center;
         }
 
         &_main{
@@ -41,16 +40,9 @@
                 & .main_contents{
                     flex-direction: column;
                     width: 35%;
-
-
-                    & h3{
-                        
-                    }
                 }
             }
         }
-
-
     }
 }
 
