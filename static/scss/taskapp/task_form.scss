@@ -26,10 +26,9 @@
                     }
                 }
                 & td{
-                    flex-direction: row;
 
-                    & input{
-                        padding: 4px;
+                    & input, textarea{
+                        padding: 3%;
                     }
                 }
             }
