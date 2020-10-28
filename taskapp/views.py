@@ -17,6 +17,11 @@ class TaskListView(ListView):
     def get_queryset(self):
         return Task.objects.order_by('day_limit')
 
+class TaskMainView(ListView):
+    template_name = "taskapp/task_main.html"
+    model = Task
+
+
 class TaskDetailView(DetailView):
     model = Task
     context_object_name = "task"
