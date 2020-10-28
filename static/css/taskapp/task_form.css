@@ -20,12 +20,8 @@
   font-size: 2rem;
 }
 
-#content form .table tbody td {
-  flex-direction: row;
-}
-
-#content form .table tbody td input {
-  padding: 4px;
+#content form .table tbody td input, #content form .table tbody td textarea {
+  padding: 3%;
 }
 
 #content form .btn_block {
