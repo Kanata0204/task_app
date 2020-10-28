@@ -1,5 +1,15 @@
 {% extends '_base.html' %}
 
+{% load static %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/taskapp/task_main.css' %}">
+{% endblock  %}
+
 {% block container %}
-    <h1>hello</h1>
+    <div id="main_block">
+        <h2 id="main_title">{{ main_task.title }}</h2>
+        <p id="main_day_time">期限：{{ main_task.day_limit }}{{ main_task.time_limit }}</p>
+        <p id="main_memo">{{ main_task.memo }}</p>
+    </div>
 {% endblock  %}
