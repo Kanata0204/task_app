@@ -20,6 +20,10 @@ class TaskListView(ListView):
 class TaskMainView(ListView):
     template_name = "taskapp/task_main.html"
     model = Task
+    context_object_name = "main_task"
+
+    def get_queryset(self):
+        return Task.objects.all().first()
 
 
 class TaskDetailView(DetailView):
