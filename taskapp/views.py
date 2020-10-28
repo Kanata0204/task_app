@@ -14,6 +14,9 @@ class TaskListView(ListView):
     context_object_name = "tasks"
     paginate_by = 5
 
+    def get_queryset(self):
+        return Task.objects.order_by('day_limit')
+
 class TaskDetailView(DetailView):
     model = Task
     context_object_name = "task"
