@@ -26,7 +26,11 @@
                     }
                 }
                 & td{
-                    // padding: 10px;
+                    flex-direction: row;
+
+                    & input{
+                        padding: 4px;
+                    }
                 }
             }
         }
