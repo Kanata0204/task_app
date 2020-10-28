@@ -6,6 +6,7 @@ header {
   top: 0;
   width: 100%;
   padding: 20px 5% 15px;
+  margin-bottom: 10px;
   border-bottom: 1px solid #4d4444;
   background-color: black;
 }

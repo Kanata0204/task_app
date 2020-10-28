@@ -1,11 +1,12 @@
 from os import name
 from django.urls import path
 from django.contrib.auth.views import LoginView, LogoutView
-from .views import TaskDetailView, TaskListView, TaskCreateView, TaskUpdateView, TaskDeleteView, TaskIndexView
+from .views import TaskDetailView, TaskListView, TaskCreateView, TaskUpdateView, TaskDeleteView, TaskIndexView, TaskMainView
 
 urlpatterns = [
     path('', TaskIndexView.as_view(), name="index"),
     path('task_list/', TaskListView.as_view(), name="list"),
+    path('tasl_list/main', TaskMainView.as_view(), name="main"),
     # pkは受け取ったint値を変数として格納→templateで扱えるように
     path('task_list/<int:pk>', TaskDetailView.as_view(), name="detail"),
     path('task_list/create/', TaskCreateView.as_view(), name="create"),
