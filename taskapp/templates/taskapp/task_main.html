@@ -12,4 +12,10 @@
         <p id="main_day_time">期限：{{ main_task.day_limit }}{{ main_task.time_limit }}</p>
         <p id="main_memo">{{ main_task.memo }}</p>
     </div>
+    <div id="main_position_btn">
+        <div id="main_btn_block">
+            <a href="{% url 'delete' main_task.id %}" id="delete_btn" class="btn">完了</a></br>
+            <a href="{% url 'list' %}" id="list_btn" class="btn">タスク管理</a>
+        </div>
+    </div>
 {% endblock  %}
