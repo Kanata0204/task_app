@@ -12,7 +12,7 @@
         {{ form }}
     </table>
     <div class="btn_block">
-        <a id="back_btn" class="btn" href="{% url 'list' %}">戻る</a>
+        <a id="back_btn" class="btn" href="{{ request.META.HTTP_REFERER }}">戻る</a>
         <button id="update_btn" class="btn" type="submit">更新</button>
     </div>
 </form>

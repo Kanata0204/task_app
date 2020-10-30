@@ -9,7 +9,7 @@
         <a href="{% url 'update' task.id %}">edit</a>
         <a href="{% url 'delete' task.id %}">delete</a>
     {% endif %}
-    <a href="{% url "list" %}">戻る</a>
+    <a href="{{ request.META.HTTP_REFERER }}">戻る</a>
 </div>
 
 {% endblock %}
