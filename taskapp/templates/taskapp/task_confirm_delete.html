@@ -7,6 +7,6 @@
     <form action="#" method="post">{% csrf_token %}
         {{ form }}
         <button type="submit">yes</button>
-        <a href="{% url 'list' %}">キャンセル</a>
+        <a href="{{ request.META.HTTP_REFERER }}">キャンセル</a>
     </form>
 {% endblock  %}
