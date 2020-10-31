@@ -4,8 +4,10 @@ header {
   align-items: center;
   position: fixed;
   top: 0;
+  z-index: 100;
   width: 100%;
-  padding: 20px 5% 15px;
+  height: 6rem;
+  padding: 2rem;
   border-bottom: 1px solid #4d4444;
   background-color: black;
 }
@@ -15,6 +17,5 @@ header #main-title {
 }
 
 header #login-btn {
-  margin-right: 20px;
   background-color: #f11f1f;
 }
