@@ -28,11 +28,12 @@
 
                 &_content{
                     & h3{
-                        font-size: 2.5rem;
                         margin-bottom: 1.5rem;
+                        font-size: 2.5rem;
                     }
                     & p{
                         font-size: 1.6rem;
+                        text-align: left;
                     }
                 }
                 & img{
@@ -54,7 +55,6 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 2.5rem;
             letter-spacing: 5px;
 
             & span{
@@ -92,7 +92,7 @@
                         }
                     }
                     & img{
-                        width: 50%;
+                        width: 40%;
                         margin: 0;
                     }
                 }
@@ -102,45 +102,15 @@
 }
 
 
-// @media (min-width:1024px){
-//     #content {
+@media (min-width:1024px){
+    #img_field{
 
-//         & #index{
-//             &_title{
-//             }
-    
-//             &_main{
-    
-//                 & .main_block{
-//                     display: flex;
-//                     justify-content: space-around;
-//                     width: 90%;
-//                     margin: 0 auto;
-//                     margin-bottom: 8%;
-    
-//                     &:nth-child(even){
-    
-//                         & img{
-//                             order: 2;
-//                         }
-    
-//                         & .main_contents{
-//                             order: 1;
-//                         }
-//                     }
-    
-//                     & img{
-//                         border-radius: 50%;
-//                     }
-    
-//                     & .main_contents{
-//                         flex-direction: column;
-//                         width: 35%;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-// }
+        & #index_title{
+            font-size: 4.5rem;
+
+            & span{
+            }
+        }
+    }
+}
 

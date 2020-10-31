@@ -29,12 +29,13 @@
 }
 
 #content #index_main .main_block_content h3 {
-  font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  font-size: 2.5rem;
 }
 
 #content #index_main .main_block_content p {
   font-size: 1.6rem;
+  text-align: left;
 }
 
 #content #index_main .main_block img {
@@ -49,7 +50,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5rem;
     letter-spacing: 5px;
   }
   #img_field #index_title span {
@@ -76,7 +76,13 @@
     order: 2;
   }
   #content #index_main .main_block img {
-    width: 50%;
+    width: 40%;
     margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  #img_field #index_title {
+    font-size: 4.5rem;
   }
 }
