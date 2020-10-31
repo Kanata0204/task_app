@@ -1,0 +1,28 @@
+#content {
+  position: relative;
+  height: 100vh;
+}
+
+#content form {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#content form table {
+  margin: 0 auto;
+}
+
+#content form table caption {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+#content form table tbody tr {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
