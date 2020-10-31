@@ -2,18 +2,17 @@
 // 視覚整形->視覚効果->ボックスモデル->背景->画像->色->フォント、
 // テキスト->マルチカラム->生成コンテンツ、リスト->ユーザーインターフェース->アニメーション->音声
 
+// モバイルファースト
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     letter-spacing: 2px;
-    font-size: 62.5%;
     // font-family: "Zapfino", "Segoe Script", "Arial", "ＭＳ 明朝", "MS Mincho", "ヒラギノ角ゴシック", "Hiragino Sans", "Zapfino", sans-serif;
 }
 
-h2 {
-    font-size: 48px;
-    text-align: center;
+html{
+    font-size: 62.5%;
 }
 
 li {
@@ -21,23 +20,41 @@ li {
 }
 
 a {
-    display: inline-block;
     text-decoration: none;
+}
+
+span{
+    display: inline-block;
 }
 
 .btn {
     display: inline-block;
     padding: 5px 15px;
     color: white;
-    font-size: 16px;
     border-radius: 5%;
     border-style: none;
     cursor: pointer;
 }
 
 #content {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 7rem;
-    // font-size: 5rem;
+    width: 100%;
+    line-height: 1.5;
+}
+
+
+@media (min-width:600px){
+    html{
+        font-size: 75%;
+    }
+}
+
+@media (min-width:1024px){
+    html{
+        font-size: 100%;
+    }
+    #content {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 7rem;
+    }
 }
