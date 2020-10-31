@@ -23,9 +23,52 @@
                     display: flex;
                     flex-direction: column;
                     margin-bottom: 2rem;
+                    
+                    & th{
+                    }
+
+                    & td{
+                        & input{
+                            height: 100%;
+                            border: none;
+                           
+                        }
+                    }
                 }
             }
         }
+        & #login_post_btn{
+            background-color: black;
+        }
 
+    }
+}
+
+@media (min-width:600px){
+    #content{
+        & form{
+            & table{
+                & caption{
+                    font-size: 2.6rem;
+                }
+                & tbody{
+                    & tr{
+                        flex-direction: row;
+
+                        & th{
+                            font-size: 1.5rem;
+                        }
+
+                        & td{
+                            & input{
+                                font-size: 1.5rem;
+                               
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
     }
 }
