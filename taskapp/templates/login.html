@@ -17,7 +17,7 @@
         </table>
     {% if request.path == 'login' %}{% endif %}
     <input type="hidden" name="next" value="{{ next }}"></input>
-    <button class="btn" type="submit">ログイン</button>
+    <button id="login_post_btn" class="btn" type="submit">ログイン</button>
 
     </form>
 {% endblock %}
