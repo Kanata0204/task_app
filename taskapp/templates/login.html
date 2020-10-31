@@ -11,9 +11,10 @@
     <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
 
-    <table>
-        {{ form }}
-    </table>
+        <table>
+            <caption>ログイン確認</caption>
+            {{ form }}
+        </table>
     {% if request.path == 'login' %}{% endif %}
     <input type="hidden" name="next" value="{{ next }}"></input>
     <button class="btn" type="submit">ログイン</button>
