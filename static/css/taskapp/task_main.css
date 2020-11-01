@@ -56,9 +56,6 @@
   #main_block {
     width: 100%;
   }
-  #main_block #title_limit_block #main_title {
-    font-size: 8rem;
-  }
   #main_block #memo_btn_block {
     flex-direction: column;
   }
