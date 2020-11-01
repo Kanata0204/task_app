@@ -1,18 +1,36 @@
+
 #create_btn{
+    margin: 2rem 0 2rem 1rem;
     background-color: black;
 }
 
 .task {
-    padding: 3%;
+    padding: 1rem;
     border-top: 1px solid #b19f9f;
+
+    &_title{
+        color: black;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    &_limit{
+        font-size: 1.2rem;
+    }
 }
 
-.page_navigation li {
-    font-size: 3em;
-    padding-right: 8px;
+.page_navigation {
+    & ul{
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+
+        & li {
+        padding-right: 8px;
+        }
+    }
 }
 
 .active a{
-    color: purple;
+    color: black;
     cursor: default;
 }
