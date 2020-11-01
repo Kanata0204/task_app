@@ -1,0 +1,46 @@
+#content{
+    text-align: center;
+
+    & #detail_block{
+        margin-top: 20rem;
+
+        & #title_limit_block{
+            display: inline-block;
+
+            & #detail{
+                &_title{
+                }
+                &_limit{
+                    text-align: right;
+                }
+            }
+        }
+        &_memo{
+            & span{
+                margin-bottom: 1rem;
+            }
+            margin: 2rem auto;
+        }
+    }
+    & #btn_block{
+        display: flex;
+        justify-content: space-around;
+
+        & #back_btn{
+            background-color: black;
+        }
+        & #edit_btn{
+            background-color: green;
+        }
+        & #delete_btn{
+            background-color: red;
+        }
+    }
+}
+
+@media (min-width:1024px){
+    #btn_block{
+        width: 50%;
+        margin: 0 auto;
+    }
+}
