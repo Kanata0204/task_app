@@ -1,0 +1,47 @@
+#content {
+  text-align: center;
+}
+
+#content #detail_block {
+  margin-top: 20rem;
+}
+
+#content #detail_block #title_limit_block {
+  display: inline-block;
+}
+
+#content #detail_block #title_limit_block #detail_limit {
+  text-align: right;
+}
+
+#content #detail_block_memo {
+  margin: 2rem auto;
+}
+
+#content #detail_block_memo span {
+  margin-bottom: 1rem;
+}
+
+#content #btn_block {
+  display: flex;
+  justify-content: space-around;
+}
+
+#content #btn_block #back_btn {
+  background-color: black;
+}
+
+#content #btn_block #edit_btn {
+  background-color: green;
+}
+
+#content #btn_block #delete_btn {
+  background-color: red;
+}
+
+@media (min-width: 1024px) {
+  #btn_block {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
