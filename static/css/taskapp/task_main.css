@@ -1,43 +1,75 @@
 #main_block {
-  margin-top: 24rem;
-  text-align: center;
-}
-
-#main_title {
-  font-size: 11rem;
-}
-
-#main_day_time {
-  margin: 3rem 0;
-  font-size: 3rem;
-  text-align: right;
-}
-
-#main_memo {
-  text-align: left;
-  height: 35rem;
-  width: 60%;
-  padding: 1%;
+  width: 90%;
   margin: 0 auto;
-  font-size: 3rem;
-  border: solid 1px black;
-}
-
-#main_position_btn {
-  text-align: right;
-}
-
-#main_btn_block {
-  display: inline-block;
+  margin-top: 15rem;
   text-align: center;
 }
 
-#main_btn_block #delete_btn {
-  width: 100%;
-  margin-bottom: 1rem;
+#main_block #title_limit_block {
+  display: inline-block;
+}
+
+#main_block #title_limit_block #main_title {
+  font-size: 4rem;
+}
+
+#main_block #title_limit_block #main_limit {
+  font-size: 1.6rem;
+  text-align: right;
+}
+
+#main_block #memo_btn_block {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+#main_block #memo_btn_block #main_memo {
+  text-align: left;
+  width: 60%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: dashed 1px black;
+}
+
+#main_block #memo_btn_block #main_btn_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30%;
+}
+
+#main_block #memo_btn_block #main_btn_block .btn {
+  width: 10rem;
+}
+
+#main_block #memo_btn_block #main_btn_block #delete_btn {
   background-color: red;
 }
 
-#main_btn_block #list_btn {
+#main_block #memo_btn_block #main_btn_block #list_btn {
   background-color: black;
+}
+
+@media (min-width: 1024px) {
+  #main_block {
+    width: 100%;
+  }
+  #main_block #title_limit_block #main_title {
+    font-size: 8rem;
+  }
+  #main_block #memo_btn_block {
+    flex-direction: column;
+  }
+  #main_block #memo_btn_block #main_memo {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  #main_block #memo_btn_block #main_btn_block {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+  }
 }

@@ -1,44 +1,90 @@
 
 #main{
-    
     &_block{
-        margin-top: 24rem;
-        text-align: center;
-    }
-    &_title{
-        font-size: 11rem;
-    }
-    &_day_time{
-        margin: 3rem 0;
-        font-size: 3rem;
-        text-align: right;
-    }
-    &_memo{
-        text-align: left;
-        height: 35rem;
-        width: 60%;
-        padding: 1%;
+        width: 90%;
         margin: 0 auto;
-        font-size: 3rem;
-        border: solid 1px black;
-    }
-
-    &_position_btn{
-        text-align: right;
-    }
-
-    &_btn_block{
-        display: inline-block;
+        margin-top: 15rem;
         text-align: center;
 
-        #delete_btn{
-            width: 100%;
-            margin-bottom: 1rem;
-            background-color: red;
-        }
+        & #title_limit_block{
+            display: inline-block;
 
-        #list_btn{
-            background-color: black;
+            & #main_title{
+                font-size: 4rem;
+            }
+            & #main_limit{
+                font-size: 1.6rem;
+                text-align: right;
+            }
+        }
+        & #memo_btn_block{
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem 0;
+
+            & #main_memo{
+                text-align: left;
+                width: 60%;
+                padding: 1rem;
+                font-size: 1.6rem;
+                border: dashed 1px black;
+            }
+            & #main_btn_block{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                width: 30%;
+    
+                & .btn{
+                    width: 10rem;
+                }
+    
+                & #delete_btn{
+                    background-color: red;
+                }
+                & #list_btn{
+                    background-color: black;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1024px){
+    #main{
+        &_block{
+            width: 100%;
+
+            & #title_limit_block{
+                & #main_title{
+                    font-size: 8rem;
+                }
+                & #main_limit{
+                }
+            }
+            & #memo_btn_block{
+                flex-direction: column;
+
+                & #main_memo{
+                    width: 90%;
+                    margin: 2rem auto;
+                }
+                & #main_btn_block{
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: 0 auto;
+                    
+                    & .btn{
+                    }
+        
+                    & #delete_btn{
+                    }
+                    & #list_btn{
+                    }
+                }
+            }
         }
     }
 }
