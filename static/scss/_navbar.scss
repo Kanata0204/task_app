@@ -14,8 +14,13 @@ header {
     & #main-title{
         color: white;
     }
-
     & #login-btn{
         background-color: rgb(241, 31, 31);
+    }
+}
+
+@media (min-width:640px){
+    header{
+        font-size: 1.5rem;
     }
 }
