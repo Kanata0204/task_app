@@ -1,15 +1,26 @@
 {% extends "_base.html" %}
 
+{% load static %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/taskapp/task_detail.css' %}">
+{% endblock  %}
+
 {% block container %}
 
-<div>
-    <h2>{{ task.title }}</h2>
-    <p>{{ task.time_limit|date:"Y/m/d H:i" }}</p>
-    {% if user.is_authenticated %}
-        <a href="{% url 'update' task.id %}">edit</a>
-        <a href="{% url 'delete' task.id %}">delete</a>
-    {% endif %}
-    <a href="{{ request.META.HTTP_REFERER }}">戻る</a>
+<div id="detail_block">
+    <div id="title_limit_block">
+        <h2 id="detail_title">{{ task.title }}</h2>
+        <p id="detail_limit">期限：{{ task.day_limit }}&nbsp{{ task.time_limit }}</p>
+    </div>
+    <p id="detail_block_memo"><span>メモ</span></br>{{ task.memo }}</p>
+    <div id="btn_block">
+        <a id="back_btn" class="btn" href="{{ request.META.HTTP_REFERER }}">戻る</a>
+        {% if user.is_authenticated %}
+        <a id="edit_btn" class="btn" href="{% url 'update' task.id %}">編集</a>
+        <a id="delete_btn" class="btn" href="{% url 'delete' task.id %}">削除</a>
+        {% endif %}
+    </div>
 </div>
 
 {% endblock %}
