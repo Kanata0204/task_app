@@ -13,8 +13,8 @@
 
     {% for task in tasks %}
         <div class="task">
-        <a href="{% url 'detail' task.pk %}">{{ task.title }}</a></br>
-            <p>{{ task.time_limit }}</p>
+            <a class="task_title" href="{% url 'detail' task.pk %}">{{ task.title }}</a></br>
+            <p class="task_limit">期限：{{ task.day_limit }}&nbsp{{ task.time_limit }}</p>
         </div>
     {% empty %}
         <h2>タスクを作成しましょう！！</h2>
@@ -22,7 +22,7 @@
 
     {% comment %} ↓pagenation実装↓ {% endcomment %}
     <nav class="page_navigation">
-        <ul style="display: flex;">
+        <ul>
 
             {% if page_obj.has_previous %}
                 <li>
