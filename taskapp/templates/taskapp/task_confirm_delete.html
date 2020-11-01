@@ -1,12 +1,18 @@
 {% extends '_base.html' %}
 
-{% block title %}削除確認{% endblock  %}
+{% load static %}
+
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'css/taskapp/task_confirm_delete.css' %}">
+{% endblock  %}
 
 {% block container %}
-    <p>本当に削除してよろしいですか？</p>
-    <form action="#" method="post">{% csrf_token %}
+    <p>本当に削除しますか？</p>
+    <form method="post">{% csrf_token %}
         {{ form }}
-        <button type="submit">yes</button>
-        <a href="{{ request.META.HTTP_REFERER }}">キャンセル</a>
+        <div id="btn_block">
+            <button id="submit_btn" class="btn" type="submit">はい</button>
+            <a id="back_btn" class="btn" href="{{ request.META.HTTP_REFERER }}">いいえ</a>
+        </div>
     </form>
 {% endblock  %}

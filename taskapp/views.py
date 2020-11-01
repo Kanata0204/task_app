@@ -23,7 +23,7 @@ class TaskMainView(ListView):
     context_object_name = "main_task"
 
     def get_queryset(self):
-        return Task.objects.all().first()
+        return Task.objects.order_by('day_limit').first()
 
 
 class TaskDetailView(DetailView):
