@@ -1,56 +1,63 @@
 #content{
-    // text-align: center;
+    text-align: center;
 
     & form{
-        padding: 5% 0;
-        margin: 0 auto;
-        margin-top: 10%;
-        // border: 1px solid black;
-        border-radius: 3%;
-        // background-color: rgb(223, 223, 222);
+        margin-top: 8rem;
 
-
-        & .table{
+        & #form_block{
+            width: 90%;
             margin: 0 auto;
-            text-align: center;
-
-            & tbody{
-                
-                & tr{
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 5%;
-
-                    & th{
-                        font-size: 2rem;
-                    }
+            & label{
+                display: block;
+                margin-bottom: 1rem;
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+            & #id{
+                &_title{
+                    width: 80%;
+                    padding: 3px;
                 }
-                & td{
-
-                    & input, textarea{
-                        padding: 3%;
-                    }
-                    & textarea{
-                        white-space: pre-wrap;
-                    }
+                &_day_limit{
+                    width: 50%;
+                    padding: 3px;
+                }
+                &_time_limit{
+                    width: 50%;
+                    padding: 3px;
+                }
+                &_memo{
+                    width: 90%;
+                    height: 10rem;
+                    padding: 3px;
                 }
             }
+            & .helptext{
+                opacity: 0.9;
+                margin-bottom: 1rem;
+                font-size: 1.2rem;
+            }
+            
         }
         & .btn_block{
+            width: 100%;
             display: flex;
-            justify-content: space-between;
-            // widthはテーブルが固定の幅のため387px固定
-            width: 387px;
-            margin: 0 auto;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
+            & .btn{
+                width: 10rem;
+            }
             & #back_btn{
                 background-color: black;
             }
-
             & #create_btn{
                 background-color: red;
             }
-
             & #update_btn{
                 background-color: red;
             }
@@ -58,3 +65,86 @@
     }
 }
 
+@media(min-width:640px){
+    #content{
+        & form{
+            margin-top: 15rem;
+
+            & #form_block{
+                & label{
+                    font-size: 1.9rem;
+                }
+                & #id{
+                    &_title{
+                        width: 50%;
+                        font-size: 1.6rem;
+                    }
+                    &_day_limit{
+                        width: 30%;
+                        font-size: 2rem;
+                    }
+                    &_time_limit{
+                        width: 30%;
+                        font-size: 2rem;
+                    }
+                    &_memo{
+                        width: 55%;
+                        height: 20rem;
+                        font-size: 2rem;
+                    }
+                }
+                & .helptext{
+                    margin-bottom: 2rem;
+                    font-size: 1.6rem;
+
+                }
+            }
+            & .btn_block{
+                & .btn{
+                    width: 12rem;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:1024px){
+    #content{
+        & form{
+            & #form_block{
+                & label{
+                    font-size: 2.5rem;
+                }
+                & #id{
+                    &_title{
+                        width: 25%;
+                        font-size: 1.6rem;
+                    }
+                    &_day_limit{
+                        width: 15%;
+                        font-size: 2rem;
+                    }
+                    &_time_limit{
+                        width: 15%;
+                        font-size: 2rem;
+                    }
+                    &_memo{
+                        width: 30%;
+                        height: 15rem;
+                        font-size: 2rem;
+                    }
+                }
+                & .helptext{
+                    margin-bottom: 2rem;
+                    font-size: 1.6rem;
+
+                }
+            }
+            & .btn_block{
+                & .btn{
+                    width: 15rem;
+                }
+            }
+        }
+    }
+}
