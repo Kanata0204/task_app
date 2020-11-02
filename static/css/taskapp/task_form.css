@@ -24,6 +24,10 @@
   padding: 3%;
 }
 
+#content form .table tbody td textarea {
+  white-space: pre-wrap;
+}
+
 #content form .btn_block {
   display: flex;
   justify-content: space-between;
