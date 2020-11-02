@@ -17,7 +17,7 @@ html{
     font-size: 62.5%;
 }
 h2{
-    font-size: 2.4rem;
+    font-size: 4rem;
 }
 p{
     font-size: 1.4rem;
@@ -64,7 +64,7 @@ span{
 
 @media (min-width:600px){
     h2{
-        font-size: 5rem;
+        font-size: 8rem;
     }
     p{
         font-size: 1.9rem;
@@ -78,9 +78,6 @@ span{
 }
 
 @media (min-width:1024px){
-    h2{
-        font-size: 7.4rem;
-    }
     p{
         font-size: 2.5rem;
     }
