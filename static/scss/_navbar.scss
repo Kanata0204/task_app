@@ -19,6 +19,7 @@ header {
         align-items: center;
         width: 100%;
         & #logout_btn{
+            opacity: 0.6;
             font-size: 1rem;
         }
     }
