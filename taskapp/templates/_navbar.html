@@ -5,13 +5,15 @@
 {% endblock %}
 
 <header>
-    <h2><a href="/" id="main-title"><span>タス</span><span>マネ</span></a></h2>
+    <a href="/" id="main_title">タスマネ</a>
 
     {% if user.is_authenticated %}
-        <a href="{% url 'main' %}" class="btn">メインタスク</a>
-        <a href="{% url 'list' %}" class="btn">タスク一覧</a>
-        <a href="{% url 'logout' %}" class="btn" id="logout_btn">ログアウト</a>
-    {% elif not "logout" in request.path %}
-        <a href="{% url 'login' %}?next={% if '/' in request.path %}/task_list{% else %}{{ request.path }}{% endif %}" class="btn" id="login-btn">ログイン</a>
-    {% endif %}
+    <nav id="header_menu">
+        <a id="main_btn" class="btn" href="{% url 'main' %}">メインタスク</a>
+        <a id="list_btn" class="btn" href="{% url 'list' %}">タスク管理</a>
+        <a id="logout_btn" class="btn" href="{% url 'logout' %}">ログアウト</a>
+    </nav>
+        {% elif not "logout" in request.path %}
+        <a class="btn" id="login-btn" href="{% url 'login' %}?next={% if '/' in request.path %}/task_list{% else %}{{ request.path }}{% endif %}">ログイン</a>
+        {% endif %}
 </header>
