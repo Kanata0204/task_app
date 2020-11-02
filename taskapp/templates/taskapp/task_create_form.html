@@ -10,9 +10,9 @@
 
 {% block container %}
 <form action="#" method="POST">{% csrf_token %}
-    <table class="table">
+    <div id="form_block">
         {{ form }}
-    </table>
+    </div>
     <div class="btn_block">
         <a id="back_btn" class="btn" href="{{ request.META.HTTP_REFERER }}">戻る</a>
         <button id="create_btn" class="btn" type="submit">作成</button>
