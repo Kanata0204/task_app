@@ -1,31 +1,42 @@
 #content{
-    text-align: center;
 
     & #detail_block{
-        margin-top: 20rem;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 15rem;
+        text-align: center;
 
         & #title_limit_block{
-            display: inline-block;
+            margin-bottom: 2rem;
 
             & #detail{
-                &_title{
-                }
                 &_limit{
                     text-align: right;
                 }
             }
         }
         &_memo{
-            & span{
-                margin-bottom: 1rem;
-            }
+            width: 90%;
+            padding: 1rem;
             margin: 2rem auto;
+            border: dashed 1px black;
+            text-align: left;
+            white-space: pre-wrap;
         }
     }
     & #btn_block{
         display: flex;
         justify-content: space-around;
-
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        & .btn{
+            width: 10rem;
+        }
         & #back_btn{
             background-color: black;
         }
@@ -38,9 +49,30 @@
     }
 }
 
+@media (min-width:640px){
+    #content{
+        #detail_block{
+            & #title_limit_block{
+                margin-bottom: 10rem;
+            }
+        }
+        & #btn_block{
+            & .btn{
+                width: 12rem;
+            }
+        }
+    }
+}
+
 @media (min-width:1024px){
-    #btn_block{
-        width: 50%;
-        margin: 0 auto;
+    #content{
+        & #detail_block{
+            width: 80%;
+        }
+        & #btn_block{
+            & .btn{
+                width: 15rem;
+            }
+        }
     }
 }

@@ -11,19 +11,18 @@
 
             & #main_title{
                 width: 100%;
-                font-size: 4rem
             }
             & #main_limit{
                 text-align: right;
             }
         }
         & #main_memo{
-            text-align: left;
             width: 90%;
             padding: 1rem;
             margin: 2rem auto;
-            white-space: pre-wrap;
             border: dashed 1px black;
+            text-align: left;
+            white-space: pre-wrap;
         }
         & #main_btn_block{
             display: flex;
@@ -54,12 +53,6 @@
         &_block{
             & #title_limit_block{
                 margin-bottom: 10rem;
-                & #main_title{
-                    font-size: 8rem
-                }
-                & #main_limit{
-                    // font-size: 2.6rem;
-                }
             }
             & #main_btn_block{
                 width: 60%;
