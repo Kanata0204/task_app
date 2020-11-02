@@ -30,6 +30,9 @@
                     & input, textarea{
                         padding: 3%;
                     }
+                    & textarea{
+                        white-space: pre-wrap;
+                    }
                 }
             }
         }
