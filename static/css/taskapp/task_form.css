@@ -1,38 +1,63 @@
-#content form {
-  padding: 5% 0;
-  margin: 0 auto;
-  margin-top: 10%;
-  border-radius: 3%;
-}
-
-#content form .table {
-  margin: 0 auto;
+#content {
   text-align: center;
 }
 
-#content form .table tbody tr {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5%;
+#content form {
+  margin-top: 8rem;
 }
 
-#content form .table tbody tr th {
-  font-size: 2rem;
+#content form #form_block {
+  width: 90%;
+  margin: 0 auto;
 }
 
-#content form .table tbody td input, #content form .table tbody td textarea {
-  padding: 3%;
+#content form #form_block label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
-#content form .table tbody td textarea {
-  white-space: pre-wrap;
+#content form #form_block #id_title {
+  width: 80%;
+  padding: 3px;
+}
+
+#content form #form_block #id_day_limit {
+  width: 50%;
+  padding: 3px;
+}
+
+#content form #form_block #id_time_limit {
+  width: 50%;
+  padding: 3px;
+}
+
+#content form #form_block #id_memo {
+  width: 90%;
+  height: 10rem;
+  padding: 3px;
+}
+
+#content form #form_block .helptext {
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 #content form .btn_block {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  width: 387px;
-  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#content form .btn_block .btn {
+  width: 10rem;
 }
 
 #content form .btn_block #back_btn {
@@ -45,4 +70,67 @@
 
 #content form .btn_block #update_btn {
   background-color: red;
+}
+
+@media (min-width: 640px) {
+  #content form {
+    margin-top: 15rem;
+  }
+  #content form #form_block label {
+    font-size: 1.9rem;
+  }
+  #content form #form_block #id_title {
+    width: 50%;
+    font-size: 1.6rem;
+  }
+  #content form #form_block #id_day_limit {
+    width: 30%;
+    font-size: 2rem;
+  }
+  #content form #form_block #id_time_limit {
+    width: 30%;
+    font-size: 2rem;
+  }
+  #content form #form_block #id_memo {
+    width: 55%;
+    height: 20rem;
+    font-size: 2rem;
+  }
+  #content form #form_block .helptext {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+  #content form .btn_block .btn {
+    width: 12rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #content form #form_block label {
+    font-size: 2.5rem;
+  }
+  #content form #form_block #id_title {
+    width: 25%;
+    font-size: 1.6rem;
+  }
+  #content form #form_block #id_day_limit {
+    width: 15%;
+    font-size: 2rem;
+  }
+  #content form #form_block #id_time_limit {
+    width: 15%;
+    font-size: 2rem;
+  }
+  #content form #form_block #id_memo {
+    width: 30%;
+    height: 15rem;
+    font-size: 2rem;
+  }
+  #content form #form_block .helptext {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+  }
+  #content form .btn_block .btn {
+    width: 15rem;
+  }
 }

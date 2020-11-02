@@ -6,10 +6,10 @@ from .models import Task
 
 class TaskForm(forms.ModelForm):
 
-    title = forms.CharField(label="タスク名", widget=forms.TextInput(attrs={"size":50}), help_text="※必須")
+    title = forms.CharField(label="タスク名", widget=forms.TextInput(), help_text="※必須")
     day_limit = forms.DateField(label='期限日',widget=forms.DateInput(attrs={"type":"date"}), required=False, help_text="※任意")
     time_limit = forms.TimeField(label='時間の期限', widget=forms.TimeInput(attrs={"type":"time"}), required=False, help_text="※任意")
-    memo = forms.CharField(label="備考", widget=forms.Textarea(attrs={"cols":50}), required=False, help_text="※任意")
+    memo = forms.CharField(label="メモ", widget=forms.Textarea(), required=False, help_text="※任意")
 
     class Meta:
         model = Task
