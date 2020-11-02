@@ -5,10 +5,10 @@
 {% endblock %}
 
 <header>
-    <a href="/" id="main_title">タスマネ</a>
+    <nav id="header_menu">
+        <a href="{% url 'main' %}" id="main_title">タスマネ</a>
 
     {% if user.is_authenticated %}
-    <nav id="header_menu">
         <a id="main_btn" class="btn" href="{% url 'main' %}">メインタスク</a>
         <a id="list_btn" class="btn" href="{% url 'list' %}">タスク管理</a>
         <a id="logout_btn" class="btn" href="{% url 'logout' %}">ログアウト</a>
