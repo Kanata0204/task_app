@@ -9,6 +9,7 @@
     padding: 0;
     letter-spacing: 2px;
     line-height: 1.5;
+    overflow-wrap: break-word;
     // font-family: "Zapfino", "Segoe Script", "Arial", "ＭＳ 明朝", "MS Mincho", "ヒラギノ角ゴシック", "Hiragino Sans", "Zapfino", sans-serif;
 }
 
@@ -45,6 +46,21 @@ span{
     margin-top: 6rem;
 }
 
+#messages{
+    padding: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+
+    & .success{
+        background-color: #F1FFF7;
+        border: 1px solid #DEF6EA;
+        border-radius: 5%;
+    }
+    & .error{
+        background-color: #fc3640e7;
+    }
+}
+
 
 @media (min-width:600px){
     h2{
@@ -55,6 +71,9 @@ span{
     }
     .btn{
         font-size: 1.5rem;
+    }
+    #messages{
+        font-size: 1.9rem;
     }
 }
 
@@ -67,5 +86,8 @@ span{
     }
     .btn{
         font-size: 2rem;
+    }
+    #messages{
+        font-size: 2.5rem;
     }
 }
