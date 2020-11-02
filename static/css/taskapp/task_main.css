@@ -11,7 +11,6 @@
 
 #main_block #title_limit_block #main_title {
   width: 100%;
-  font-size: 4rem;
 }
 
 #main_block #title_limit_block #main_limit {
@@ -19,12 +18,12 @@
 }
 
 #main_block #main_memo {
-  text-align: left;
   width: 90%;
   padding: 1rem;
   margin: 2rem auto;
-  white-space: pre-wrap;
   border: dashed 1px black;
+  text-align: left;
+  white-space: pre-wrap;
 }
 
 #main_block #main_btn_block {
@@ -53,9 +52,6 @@
 @media (min-width: 640px) {
   #main_block #title_limit_block {
     margin-bottom: 10rem;
-  }
-  #main_block #title_limit_block #main_title {
-    font-size: 8rem;
   }
   #main_block #main_btn_block {
     width: 60%;
