@@ -25,11 +25,11 @@
             white-space: pre-wrap;
         }
         & #main_btn_block{
+            width: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
             position: absolute;
-            width: 100%;
             bottom: 5%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -38,11 +38,11 @@
                 width: 10rem;
             }
 
-            & #delete_btn{
-                background-color: red;
-            }
             & #list_btn{
                 background-color: black;
+            }
+            & #delete_btn{
+                background-color: red;
             }
         }
     

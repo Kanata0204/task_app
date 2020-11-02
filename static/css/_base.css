@@ -15,6 +15,10 @@ h2 {
   font-size: 4rem;
 }
 
+h3 {
+  font-size: 2.5rem;
+}
+
 p {
   font-size: 1.4rem;
 }
@@ -66,6 +70,9 @@ span {
 @media (min-width: 600px) {
   h2 {
     font-size: 8rem;
+  }
+  h3 {
+    font-size: 5rem;
   }
   p {
     font-size: 1.9rem;
