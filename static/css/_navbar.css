@@ -23,6 +23,7 @@ header #header_menu {
 }
 
 header #header_menu #logout_btn {
+  opacity: 0.6;
   font-size: 1rem;
 }
 

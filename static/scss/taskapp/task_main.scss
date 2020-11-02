@@ -7,55 +7,66 @@
         text-align: center;
 
         & #title_limit_block{
-            display: inline-block;
+            margin-bottom: 2rem;
 
             & #main_title{
-                font-size: 4rem;
+                width: 100%;
+                font-size: 4rem
             }
             & #main_limit{
-                font-size: 1.6rem;
                 text-align: right;
             }
         }
-        & #memo_btn_block{
+        & #main_memo{
+            text-align: left;
+            width: 90%;
+            padding: 1rem;
+            margin: 2rem auto;
+            font-size: 1.6rem;
+            white-space: pre-wrap;
+            border: dashed 1px black;
+        }
+        & #main_btn_block{
             display: flex;
             justify-content: space-around;
-            padding: 2rem 0;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
-            & #main_memo{
-                text-align: left;
-                width: 60%;
-                padding: 1rem;
-                font-size: 1.6rem;
-                border: dashed 1px black;
+            & .btn{
+                width: 10rem;
             }
-            & #main_btn_block{
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: center;
-                width: 30%;
-    
-                & .btn{
-                    width: 10rem;
-                }
-    
-                & #delete_btn{
-                    background-color: red;
-                }
-                & #list_btn{
-                    background-color: black;
-                }
+
+            & #delete_btn{
+                background-color: red;
+            }
+            & #list_btn{
+                background-color: black;
             }
         }
+    
     }
 }
 @media (min-width:640px){
     #main{
         &_block{
             & #title_limit_block{
+                margin-bottom: 10rem;
+                & #main_title{
+                    font-size: 8rem
+                }
                 & #main_limit{
                     // font-size: 2.6rem;
+                }
+            }
+            & #main_btn_block{
+                width: 60%;
+
+                & .btn{
+                    width: 12rem;
                 }
             }
         }
@@ -63,38 +74,12 @@
 }
 
 @media (min-width:1024px){
-    #main{
-        &_block{
-            width: 100%;
+    #main_block{
+        width: 80%;
 
-            & #title_limit_block{
-                & #main_title{
-                    // font-size: 8rem;
-                }
-                & #main_limit{
-                }
-            }
-            & #memo_btn_block{
-                flex-direction: column;
-
-                & #main_memo{
-                    width: 90%;
-                    margin: 2rem auto;
-                }
-                & #main_btn_block{
-                    flex-direction: row;
-                    justify-content: space-around;
-                    align-items: center;
-                    margin: 0 auto;
-                    
-                    & .btn{
-                    }
-        
-                    & #delete_btn{
-                    }
-                    & #list_btn{
-                    }
-                }
+        & #main_btn_block{
+            & .btn{
+                width: 15rem;
             }
         }
     }
