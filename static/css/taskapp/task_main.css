@@ -6,67 +6,71 @@
 }
 
 #main_block #title_limit_block {
-  display: inline-block;
+  margin-bottom: 2rem;
 }
 
 #main_block #title_limit_block #main_title {
+  width: 100%;
   font-size: 4rem;
 }
 
 #main_block #title_limit_block #main_limit {
-  font-size: 1.6rem;
   text-align: right;
 }
 
-#main_block #memo_btn_block {
-  display: flex;
-  justify-content: space-around;
-  padding: 2rem 0;
-}
-
-#main_block #memo_btn_block #main_memo {
+#main_block #main_memo {
   text-align: left;
-  width: 60%;
+  width: 90%;
   padding: 1rem;
+  margin: 2rem auto;
   font-size: 1.6rem;
+  white-space: pre-wrap;
   border: dashed 1px black;
 }
 
-#main_block #memo_btn_block #main_btn_block {
+#main_block #main_btn_block {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
-  width: 30%;
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#main_block #memo_btn_block #main_btn_block .btn {
+#main_block #main_btn_block .btn {
   width: 10rem;
 }
 
-#main_block #memo_btn_block #main_btn_block #delete_btn {
+#main_block #main_btn_block #delete_btn {
   background-color: red;
 }
 
-#main_block #memo_btn_block #main_btn_block #list_btn {
+#main_block #main_btn_block #list_btn {
   background-color: black;
+}
+
+@media (min-width: 640px) {
+  #main_block #title_limit_block {
+    margin-bottom: 10rem;
+  }
+  #main_block #title_limit_block #main_title {
+    font-size: 8rem;
+  }
+  #main_block #main_btn_block {
+    width: 60%;
+  }
+  #main_block #main_btn_block .btn {
+    width: 12rem;
+  }
 }
 
 @media (min-width: 1024px) {
   #main_block {
-    width: 100%;
+    width: 80%;
   }
-  #main_block #memo_btn_block {
-    flex-direction: column;
-  }
-  #main_block #memo_btn_block #main_memo {
-    width: 90%;
-    margin: 2rem auto;
-  }
-  #main_block #memo_btn_block #main_btn_block {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
+  #main_block #main_btn_block .btn {
+    width: 15rem;
   }
 }
