@@ -21,9 +21,9 @@
         {% block title %}{% endblock %}
 
         {% if messages %}
-            <ul>
+            <ul id="messages">
                 {% for message in messages %}
-                    <li>{{ message }}</li>
+                    <li {% if message.tags %}class="{{ message.tags }}"{% endif %}>{{ message }}</li>
                 {% endfor %}
             </ul>
         {% endif %}
