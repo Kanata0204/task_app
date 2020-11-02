@@ -7,12 +7,12 @@
 {% endblock  %}
 
 {% block container %}
-    <p>本当に削除しますか？</p>
+    <h3 id="confirm_delete">本当に削除しますか？</h3>
     <form method="post">{% csrf_token %}
         {{ form }}
         <div id="btn_block">
-            <button id="submit_btn" class="btn" type="submit">はい</button>
             <a id="back_btn" class="btn" href="{{ request.META.HTTP_REFERER }}">いいえ</a>
+            <button id="submit_btn" class="btn" type="submit">はい</button>
         </div>
     </form>
 {% endblock  %}

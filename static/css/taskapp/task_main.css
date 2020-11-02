@@ -27,11 +27,11 @@
 }
 
 #main_block #main_btn_block {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  width: 100%;
   bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -41,12 +41,12 @@
   width: 10rem;
 }
 
-#main_block #main_btn_block #delete_btn {
-  background-color: red;
-}
-
 #main_block #main_btn_block #list_btn {
   background-color: black;
+}
+
+#main_block #main_btn_block #delete_btn {
+  background-color: red;
 }
 
 @media (min-width: 640px) {
