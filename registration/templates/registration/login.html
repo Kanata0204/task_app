@@ -1,0 +1,11 @@
+{% extends 'base_registration.html' %}
+{% load static %}
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block container %}
+    {% include 'form_registration.html' with submit_label="ログイン" %}
+    <a href="{% url 'password_reset' %}">パスワードを忘れた場合</a>
+{% endblock %}
