@@ -36,8 +36,6 @@ class TaskCreateView(LoginRequiredMixin, CreateView):
     form_class = TaskForm
     success_url = reverse_lazy("list")
 
-    login_url = '/login'
-
     # 正しく作成できた時
     def form_valid(self, form):
         messages.success(self.request, "保存しました")
@@ -51,9 +49,6 @@ class TaskUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "taskapp/task_update_form.html"
     model = Task
     form_class = TaskForm
-
-    # ログインしていないユーザが編集しようとすると強制的にリダイレクトさせる
-    login_url = '/login'
 
     def get_success_url(self):
         # pk取得
@@ -73,8 +68,6 @@ class TaskUpdateView(LoginRequiredMixin, UpdateView):
 class TaskDeleteView(LoginRequiredMixin, DeleteView):
     model = Task
     success_url = reverse_lazy("list")
-
-    login_url = '/login'
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, "削除しました")
