@@ -14,4 +14,4 @@ class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
         # 例え、id=1, content = ...のような悪意のあるフォームが送られても無視できる
-        fields = '__all__'
+        fields = ('title', 'day_limit', 'time_limit', 'memo')
