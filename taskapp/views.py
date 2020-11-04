@@ -15,7 +15,7 @@ class TaskListView(ListView):
     paginate_by = 5
 
     def get_queryset(self):
-        return Task.objects.order_by('day_limit')
+        return Task.objects.filter(user=self.request.user).order_by('day_limit')
 
 class TaskMainView(ListView):
     template_name = "taskapp/task_main.html"
@@ -23,7 +23,8 @@ class TaskMainView(ListView):
     context_object_name = "main_task"
 
     def get_queryset(self):
-        return Task.objects.order_by('day_limit').first()
+        print(self.context_object_name)
+        return Task.objects.filter(user=self.request.user).order_by('day_limit').first()
 
 
 class TaskDetailView(DetailView):
