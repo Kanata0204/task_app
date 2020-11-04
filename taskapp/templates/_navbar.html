@@ -12,7 +12,8 @@
         <a id="list_btn" class="btn" href="{% url 'list' %}">タスク管理</a>
         <a id="logout_btn" class="btn" href="{% url 'logout' %}">ログアウト</a>
     </nav>
-        {% elif not "logout" in request.path %}
+    {% else %}
+        <a class="btn" id="signup_btn" href="{% url 'signup' %}">サインアップ</a>
         <a class="btn" id="login-btn" href="{% url 'login' %}">ログイン</a>
-        {% endif %}
+    {% endif %}
 </header>

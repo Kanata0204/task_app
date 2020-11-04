@@ -39,6 +39,9 @@ class TaskCreateView(LoginRequiredMixin, CreateView):
 
     # 正しく作成できた時
     def form_valid(self, form):
+        task = form.save(commit=False)
+        task.user = self.request.user
+        task.save()
         messages.success(self.request, "保存しました")
         return super().form_valid(form)
 

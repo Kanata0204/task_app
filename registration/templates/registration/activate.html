@@ -1,0 +1,10 @@
+{% extends 'base_registration.html' %}
+
+{% block container %}
+{% if result %}
+    <p>認証に成功しました</p>
+    <a href="{% url 'login' %}">ログイン</a>
+{% else %}
+    <p>無効なリンクです</p>
+{% endif %}
+{% endblock %}
