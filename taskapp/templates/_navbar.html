@@ -13,7 +13,9 @@
         <a id="logout_btn" class="btn" href="{% url 'logout' %}">ログアウト</a>
     </nav>
     {% else %}
-        <a class="btn" id="signup_btn" href="{% url 'signup' %}">サインアップ</a>
-        <a class="btn" id="login-btn" href="{% url 'login' %}">ログイン</a>
+        <div id="login_signup_block">
+            <a class="btn" id="signup_btn" href="{% url 'signup' %}">サインアップ</a>
+            <a class="btn" id="login-btn" href="{% url 'login' %}">ログイン</a>
+        </div>
     {% endif %}
 </header>

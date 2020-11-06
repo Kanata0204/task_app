@@ -17,7 +17,7 @@ header #main_title {
 
 header #header_menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
 }
