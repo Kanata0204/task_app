@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_sass',
-    'taskapp'
+    'anymail',
+    'taskapp',
 ]
 
 MIDDLEWARE = [
@@ -136,7 +137,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# 開発用メール確認
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGIN_URL = "/login"
 
