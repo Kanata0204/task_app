@@ -11,39 +11,48 @@ header {
     background-color: black;
 
     & #main_title{
-        display: none;
+        display: inline-block;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
     }
     & #header_menu{
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         width: 100%;
+
+        & #login_signup_block{
+            & a{
+                font-size: 1.2rem;
+            }
+            & #login-btn{
+                background-color: rgb(241, 31, 31);
+            }
+        }
         & #logout_btn{
             opacity: 0.8;
-            font-size: 1rem;
         }
-    }
-    & #login-btn{
-        background-color: rgb(241, 31, 31);
     }
 }
 
 @media (min-width:640px){
     header {
         & #main_title{
-            display: inline-block;
-            color: white;
-            font-size: 1.9rem;
-            font-weight: bold;
+            font-size: 2.5rem;
         }
 
         & #header_menu{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            width: 95%;
+            margin: 0 auto;
 
-            & #logout_btn{
-                font-size: 1.5rem;
+            & #login_signup_block{
+                & a{
+                    font-size: 1.6rem;
+                }
+                & #login-btn{
+                    background-color: rgb(241, 31, 31);
+                }
             }
         }
     }
@@ -52,7 +61,7 @@ header {
 @media (min-width:1024px){
     header {
         & #main_title{
-            font-size: 2.2rem;
+            // font-size: 2.2rem;
         }
     }
 }

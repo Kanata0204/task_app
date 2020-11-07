@@ -1,23 +1,9 @@
-{% comment %} {% load static %} {% endcomment %}
+{% extends '_base.html' %}
 
-<html lang="ja">
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% comment %} <link rel="stylesheet" href="{% static 'css/_base.css' %}"> {% endcomment %}
-    <title>タスマネ~課題・宿題管理~</title>
-    {% block custom_css %}
-    {% endblock  %}
-</head>
+{% block container %}
 
-<body>
-
-    <div id="content">
-        {% block container %}
-
-        {% endblock %}
-    </div>
-</body>
+{% endblock %}
 
 </html>
