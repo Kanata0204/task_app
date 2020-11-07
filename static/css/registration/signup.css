@@ -1,0 +1,84 @@
+#content {
+  text-align: center;
+}
+
+#content form {
+  margin-top: 8rem;
+}
+
+#content form label {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+#content form #id_username {
+  padding: 1px 3px;
+}
+
+#content form #id_email {
+  width: 80%;
+  padding: 1px 3px;
+}
+
+#content form #id_password1 {
+  padding: 1px 3px;
+}
+
+#content form #id_password2 {
+  padding: 1px 3px;
+}
+
+#content form .helptext, #content form ul {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-align: left;
+  opacity: 0.8;
+}
+
+#content form #registration_btn {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+}
+
+@media (min-width: 640px) {
+  #content form #id_email {
+    width: 40%;
+  }
+  #content form .helptext, #content form ul {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  #content form #registration_btn {
+    width: 12rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #content form label {
+    margin-top: 3rem;
+  }
+  #content form #id_username {
+    width: 20%;
+  }
+  #content form #id_email {
+    width: 20%;
+  }
+  #content form #id_password1 {
+    width: 20%;
+  }
+  #content form #id_password2 {
+    width: 20%;
+  }
+  #content form .helptext, #content form ul {
+    font-size: 1.4rem;
+  }
+  #content form #registration_btn {
+    width: 15rem;
+  }
+}
