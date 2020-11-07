@@ -138,7 +138,7 @@ STATICFILES_DIRS = (
 )
 
 # 開発用メール確認
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 LOGIN_URL = "/login"
 

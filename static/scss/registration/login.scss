@@ -1,74 +1,81 @@
 #content{
-    position: relative;
-    height: 100vh;
+    text-align: center;
 
     & form{
-        width: 100%;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
+        margin-top: 20rem;
 
-        & table{
-            margin: 0 auto;
-
-            & caption{
-                padding: 1rem;
-                font-weight: bold;
+        & label{
+            display: block;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        & #id{
+            &_username{
+                padding: 1px 3px;
             }
-
-            & tbody{
-                & tr{
-                    display: flex;
-                    flex-direction: column;
-                    margin-bottom: 2rem;
-                    
-                    & th{
-                    }
-
-                    & td{
-                        & input{
-                            height: 100%;
-                            border: none;
-                           
-                        }
-                    }
-                }
+            &_password{
+                padding: 1px 3px;
             }
         }
-        & #login_post_btn{
-            background-color: black;
+        & #login_btn{
+            margin-top: 2rem;
+            background-color: #F11F1F;
         }
-
+    }
+    & #forget_password{
+        display: inline-block;
+        margin-top: 0.5rem;
+        color: blue;
+        font-size: 1rem;
+    }
+    & .errorlist{
+        display: inline-block;
+        background-color:#F8D7DA;
+        border: 1px solid #F5C6CB;
+        font-size: 1rem;
     }
 }
 
-@media (min-width:600px){
+@media(min-width:640px){
     #content{
         & form{
-            & table{
-                & caption{
-                    font-size: 2.6rem;
+            & #login_btn{
+                width: 12rem;
+            }
+        }
+        & #forget_password{
+            font-size: 1.2rem;
+        }
+        & .errorlist{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media(min-width:1024px){
+    #content{
+        & form{
+            & label{
+                margin-top: 3rem;
+            }
+            & #id{
+                &_username{
+                    width: 15%;
                 }
-                & tbody{
-                    & tr{
-                        flex-direction: row;
-
-                        & th{
-                            font-size: 1.5rem;
-                        }
-
-                        & td{
-                            & input{
-                                font-size: 1.5rem;
-                               
-                            }
-                        }
-                    }
+                &_password{
+                    width: 15%;
                 }
             }
-    
+            & #login_btn{
+                width: 15rem;
+            }
+        }
+        & #forget_password{
+            font-size: 1.4rem;
+        }
+        & .errorlist{
+            font-size: 1.4rem;
         }
     }
 }
