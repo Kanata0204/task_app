@@ -1,0 +1,74 @@
+#content {
+  text-align: center;
+}
+
+#content form {
+  margin-top: 20rem;
+}
+
+#content form label {
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+#content form #id_username {
+  padding: 1px 3px;
+}
+
+#content form #id_password {
+  padding: 1px 3px;
+}
+
+#content form #login_btn {
+  margin-top: 2rem;
+  background-color: #F11F1F;
+}
+
+#content #forget_password {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: blue;
+  font-size: 1rem;
+}
+
+#content .errorlist {
+  display: inline-block;
+  background-color: #F8D7DA;
+  border: 1px solid #F5C6CB;
+  font-size: 1rem;
+}
+
+@media (min-width: 640px) {
+  #content form #login_btn {
+    width: 12rem;
+  }
+  #content #forget_password {
+    font-size: 1.2rem;
+  }
+  #content .errorlist {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #content form label {
+    margin-top: 3rem;
+  }
+  #content form #id_username {
+    width: 15%;
+  }
+  #content form #id_password {
+    width: 15%;
+  }
+  #content form #login_btn {
+    width: 15rem;
+  }
+  #content #forget_password {
+    font-size: 1.4rem;
+  }
+  #content .errorlist {
+    font-size: 1.4rem;
+  }
+}

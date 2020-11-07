@@ -34,7 +34,6 @@
   display: block;
   margin-top: 0.5rem;
   font-size: 1rem;
-  text-align: left;
   opacity: 0.8;
 }
 
@@ -43,7 +42,14 @@
   bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: red;
+  background-color: #F11F1F;
+}
+
+#content form .errorlist {
+  display: inline-block;
+  background-color: #F8D7DA;
+  border: 1px solid #F5C6CB;
+  font-size: 1rem;
 }
 
 @media (min-width: 640px) {
@@ -52,10 +58,12 @@
   }
   #content form .helptext, #content form ul {
     font-size: 1.2rem;
-    text-align: center;
   }
   #content form #registration_btn {
     width: 12rem;
+  }
+  #content form .errorlist {
+    font-size: 1.2rem;
   }
 }
 
@@ -80,5 +88,8 @@
   }
   #content form #registration_btn {
     width: 15rem;
+  }
+  #content form .errorlist {
+    font-size: 1.4rem;
   }
 }

@@ -2,10 +2,10 @@
 {% load static %}
 
 {% block custom_css %}
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registration/login.css' %}">
 {% endblock %}
 
 {% block container %}
-    {% include 'form_registration.html' with submit_label="ログイン" %}
-    <a href="{% url 'password_reset' %}">パスワードを忘れた場合</a>
+    {% include 'form_registration.html' with submit_id="login_btn" submit_label="ログイン" %}
+    {% comment %} <a id="forget_password" href="{% url 'password_reset' %}">パスワードを忘れた場合</a> {% endcomment %}
 {% endblock %}
