@@ -3,7 +3,8 @@
   width: 100%;
   height: 30rem;
   margin: 6rem 0;
-  background-color: aqua;
+  background-image: url(../img/todo1.png);
+  background-size: cover;
   text-align: center;
 }
 
@@ -17,9 +18,27 @@
   text-align: center;
 }
 
+#content #main_content_title {
+  font-size: 3rem;
+}
+
+#content #main_content #questions {
+  margin-bottom: 2rem;
+}
+
+#content #main_content #questions .question {
+  margin-top: 0.5rem;
+  font-size: 1.6rem;
+}
+
+#content #main_content p {
+  font-size: 1.6rem;
+}
+
 #content #index_main {
-  width: 75%;
-  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid gray;
 }
 
 #content #index_main .main_block {
@@ -35,7 +54,6 @@
 
 #content #index_main .main_block_content p {
   font-size: 1.6rem;
-  text-align: left;
 }
 
 #content #index_main .main_block img {

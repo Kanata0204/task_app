@@ -8,20 +8,35 @@
 
 {% block img_field %}
     <div id="img_field">
-        <h1 id="index_title">「行動」に結びつける<span>タスク管理アプリ<span></span></h1>
+        <h1 id="index_title">宿題に特化した<span>タスク管理アプリ</span></h1>
     </div>
-{% endblock  %}
+{% endblock %}
 
 {% block container %}
+
+    <div id="main_content">
+        <h2 id="main_content_title">宿題を忘れない</h2>
+        <ul id="questions">
+            <li id="question1" class="question">「次に提出する宿題って何だっけ？」</li>
+            <li id="question2" class="question">「何時までに提出？」</li>
+            <li id="question3" class="question">「そもそも宿題どんだけあった？」</li>
+        </ul>
+        <p>このように思う経験はありませんか？</p>
+        <p><span>タスマネ</span>は全ての疑問を解決します。</p>
+    </div>
 
     <ul id="index_main">
         <li class="main_block">
             <div class="main_block_content">
-                <h3>すぐに行動へ</h3>
-                <p>メイン画面にはあなたが一番にやるべきことが表示されています。</br>
-                   無駄に迷うことなく、すぐに行動へ移せます</p>
+                <h3>集中力を消費させない</h3>
+                <p>「宿題どれからやろうかな・・・」</p></br>
+                <p id="first_feature" class="feature"> 宿題が多いときによくありますよね。</br>
+                    しかし、その時間はもったいないです。</br>
+                    なぜなら、人は迷っている時にも貴重な集中力を消費しているからです。</br>
+                    タスマネは、メイン画面に一番期限が近い宿題が表示されています。</br>
+                    そのため, 無駄に迷うことなく、高い集中力で宿題に取りかかれます。</p>
             </div>
-            <img src="../../static/img/bush.png" alt="">
+            <!-- <img src="../../static/img/main_task.png" alt=""> -->
         </li>
         <li class="main_block">
             <div class="main_block_content">
