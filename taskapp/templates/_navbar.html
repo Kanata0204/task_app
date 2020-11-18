@@ -6,13 +6,13 @@
 
 <header>
     <nav id="header_menu">
-        <a href="{% url 'index' %}" id="main_title">タスマネ</a>
     {% if user.is_authenticated %}
         <a id="main_btn" class="btn" href="{% url 'main' %}">メインタスク</a>
         <a id="list_btn" class="btn" href="{% url 'list' %}">タスク管理</a>
         <a id="logout_btn" class="btn" href="{% url 'logout' %}">ログアウト</a>
     </nav>
     {% else %}
+        <a href="{% url 'index' %}" id="main_title">タスマネ</a>
         <div id="login_signup_block">
             <a class="btn" id="signup_btn" href="{% url 'signup' %}">サインアップ</a>
             <a class="btn" id="login-btn" href="{% url 'login' %}">ログイン</a>

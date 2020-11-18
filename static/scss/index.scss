@@ -42,8 +42,6 @@
         border-top: 1px solid gray;
 
         & .main_block{
-            display: flex;
-            flex-direction: column;
             margin-bottom: 5rem;
 
             &_content{
@@ -58,10 +56,10 @@
                 }
             }
             & img{
-                border-radius: 50%;
-                width: 80%;
+                width: 100%;
                 margin: 0 auto;
                 margin-top: 1rem;
+                border-radius: 3%;
             }
         }
     }
@@ -87,14 +85,16 @@
         & #index{
             &_main{
                 width: 90%;
+                margin: 0 auto;
 
                 & .main_block{
-                    flex-direction: row;
+                    display: flex;
                     justify-content: space-between;
+                    width: 100%;
                     margin-bottom: 5rem;
 
                     &_content{
-                        width: 45%;
+                        width: 50%;
 
                         & h3{
                             margin: 1.5rem 0;
@@ -112,6 +112,7 @@
                         }
                     }
                     & img{
+                        align-self: center;
                         width: 40%;
                         margin: 0;
                     }

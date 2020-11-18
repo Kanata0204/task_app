@@ -11,7 +11,10 @@ header {
     background-color: black;
 
     & #main_title{
-        display: none;
+        display: inline-block;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: bold;
     }
     & #header_menu{
         display: flex;
@@ -36,10 +39,7 @@ header {
 @media (min-width:640px){
     header {
         & #main_title{
-            display: inline-block;
-            color: white;
             font-size: 2.5rem;
-            font-weight: bold;
         }
 
         & #header_menu{

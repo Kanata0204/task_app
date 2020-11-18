@@ -42,8 +42,6 @@
 }
 
 #content #index_main .main_block {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 5rem;
 }
 
@@ -57,10 +55,10 @@
 }
 
 #content #index_main .main_block img {
-  border-radius: 50%;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 1rem;
+  border-radius: 3%;
 }
 
 @media (min-width: 600px) {
@@ -75,14 +73,16 @@
   }
   #content #index_main {
     width: 90%;
+    margin: 0 auto;
   }
   #content #index_main .main_block {
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
+    width: 100%;
     margin-bottom: 5rem;
   }
   #content #index_main .main_block_content {
-    width: 45%;
+    width: 50%;
   }
   #content #index_main .main_block_content h3 {
     margin: 1.5rem 0;
@@ -94,6 +94,7 @@
     order: 2;
   }
   #content #index_main .main_block img {
+    align-self: center;
     width: 40%;
     margin: 0;
   }
