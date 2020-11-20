@@ -13,4 +13,5 @@ media
 firstvirtual
 .DS_Store
 staticfiles
+.env
 # If your build process includes running collectstatic, then ...

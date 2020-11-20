@@ -9,7 +9,12 @@
 
     & #index_title{
         position: absolute;
-        top: 30%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        letter-spacing: 3px;
+        color: white;
         font-size: 2.8rem;
     }
 }
@@ -65,15 +70,29 @@
     }
 }
 
+.marker{
+    background: {
+        image: linear-gradient(90deg, #ffff66, #ffff66);
+        repeat: no-repeat;
+        position: bottom left;
+        size: 0 30%;
+    }
+    transition: all 2s ease-in-out;
+}
+
+.marker.inview{
+    background-size:100% 30%;
+}
 
 @media (min-width:600px){
     #img_field{
 
         & #index_title{
-            top: 50%;
+            top: 65%;
             left: 50%;
             transform: translate(-50%, -50%);
             letter-spacing: 5px;
+            font-size: 3.8rem;
 
             & span{
                 letter-spacing: 5px;
@@ -86,6 +105,7 @@
             &_main{
                 width: 90%;
                 margin: 0 auto;
+                margin-top: 2.5rem;
 
                 & .main_block{
                     display: flex;
@@ -127,7 +147,7 @@
     #img_field{
 
         & #index_title{
-            font-size: 4.5rem;
+            font-size: 4.8rem;
 
             & span{
             }

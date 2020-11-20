@@ -8,7 +8,7 @@
 
 {% block img_field %}
     <div id="img_field">
-        <h1 id="index_title">宿題に特化した<span>タスク管理アプリ</span></h1>
+        <h1 id="index_title">学生のための<span>タスク管理アプリ</span></h1>
     </div>
 {% endblock %}
 
@@ -19,7 +19,7 @@
         <ul id="questions">
             <li id="question1" class="question">「次に提出する宿題って何だっけ？」</li>
             <li id="question2" class="question">「何日、何時までに提出？」</li>
-            <li id="question3" class="question">「そもそも宿題どんだけあった？」</li>
+            <li id="question3" class="question">「そもそもあと宿題どれだけあった？」</li>
         </ul>
         <p>このように思う経験はありませんか？</p>
         <p><span>タスマネ</span>は全ての疑問を解決します。</p>
@@ -32,15 +32,15 @@
                 <p>「宿題どれからやろうかな・・・」</p>
                 <p id="first_feature" class="feature">
                     宿題が多いときによくありますよね。</br>
-                    しかし、人は迷っている時にも貴重な集中力を消費しています。</br>
+                    実は、人は迷っている時にも貴重な集中力を消費しています。</br>
                     タスマネでは、「メイン画面」に一番期限の近い宿題が表示されています。</br>
-                    そのため, 高い集中力で宿題に取りかかれます。</p>
+                    そのため, <span class="marker">無駄に迷うことなく、集中力を消費させることなく</spanc>、宿題に取りかかれます。</p>
             </div>
             <img src="../../static/img/main_task.png" alt="メイン画面">
         </li>
         <li class="main_block">
             <div class="main_block_content">
-                <h3>期限が迫っている順に宿題を表示</h3>
+                <h3>期限の近い宿題を一瞬で把握</h3>
                 <p>「タスク管理画面」では、上から順番に期限が近い順でこれまでのタスクを表示してくれています。</br>
                 タスクを作成すれば、すでに期限が近い順に並べられている為、すぐに自分の宿題状況
                 を把握することができます。
@@ -58,4 +58,8 @@
             <img src="../../static/img/bush.png" alt="">
         </li>
     </ul>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/index.js' %}"></script>
 {% endblock %}
