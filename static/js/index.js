@@ -1,4 +1,4 @@
-const marker = document.querySelector('.marker');
+const markers = document.querySelectorAll('.marker');
 
 const cb = function(entries, observer){
     entries.forEach(entry => {
@@ -10,4 +10,5 @@ const cb = function(entries, observer){
 }
 
 const io = new IntersectionObserver(cb);
-io.observe(marker);
+
+markers.forEach(marker => io.observe(marker));
