@@ -158,5 +158,21 @@
             }
         }
     }
+    #content{
+        #main_content{
+            &_title{
+                font-size: 4.8rem;
+            }
+        }
+        #index_main{
+            & .main_block{
+                &_content{
+                    & h3{
+                        font-size:3.6rem;
+                    }
+                }
+            }
+        }
+    }
 }
 

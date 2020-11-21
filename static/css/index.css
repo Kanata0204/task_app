@@ -125,4 +125,10 @@
   #img_field #index_title {
     font-size: 4.8rem;
   }
+  #content #main_content_title {
+    font-size: 4.8rem;
+  }
+  #content #index_main .main_block_content h3 {
+    font-size: 3.6rem;
+  }
 }
