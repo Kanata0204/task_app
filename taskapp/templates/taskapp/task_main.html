@@ -21,8 +21,13 @@
             <a href="{% url 'list' %}" id="list_btn" class="btn">タスク管理</a>
         </div>
         {% endif %}
-{% else %}
-    <h2>タスクを作成しましょう</h2>
-{% endif %}
     </div>
+{% else %}
+    <div id="empty_block">
+        <h3 id="empty_content">タスクを作成しましょう</h3>
+        {% if user.is_authenticated %}
+        <a class="btn" id="empty_list_btn" href="{% url 'list' %}">タスク管理へ</a>
+        {% endif %}
+    </div>
+{% endif %}
 {% endblock %}

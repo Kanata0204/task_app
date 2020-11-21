@@ -49,6 +49,15 @@
   background-color: red;
 }
 
+#empty_block {
+  margin-top: 30rem;
+  text-align: center;
+}
+
+#empty_block #empty_list_btn {
+  background-color: black;
+}
+
 @media (min-width: 640px) {
   #main_block #title_limit_block {
     margin-bottom: 10rem;
@@ -67,5 +76,8 @@
   }
   #main_block #main_btn_block .btn {
     width: 15rem;
+  }
+  #empty_block #empty_content {
+    font-size: 8rem;
   }
 }

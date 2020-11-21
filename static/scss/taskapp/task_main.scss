@@ -45,9 +45,17 @@
                 background-color: red;
             }
         }
-    
     }
 }
+#empty_block{
+    margin-top: 30rem;
+    text-align: center;
+
+    & #empty_list_btn{
+        background-color: black;
+    }
+}
+
 @media (min-width:640px){
     #main{
         &_block{
@@ -73,6 +81,11 @@
             & .btn{
                 width: 15rem;
             }
+        }
+    }
+    #empty_block{
+        & #empty_content{
+            font-size: 8rem;
         }
     }
 }

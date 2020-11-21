@@ -33,6 +33,10 @@
   cursor: default;
 }
 
+#empty_content {
+  text-align: center;
+}
+
 @media (min-width: 640px) {
   .task_title {
     font-size: 4rem;
@@ -42,5 +46,8 @@
 @media (min-width: 1024px) {
   .task_limit {
     font-size: 2rem;
+  }
+  #empty_content {
+    font-size: 8rem;
   }
 }

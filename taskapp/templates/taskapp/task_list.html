@@ -17,7 +17,7 @@
             <p class="task_limit">期限：{{ task.day_limit }}&nbsp{{ task.time_limit }}</p>
         </div>
     {% empty %}
-        <h2>タスクを作成しましょう！！</h2>
+    <h3 id="empty_content">タスクを作成しましょう！！</h3>
     {% endfor %}
 
     {% comment %} ↓pagenation実装↓ {% endcomment %}
