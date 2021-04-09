@@ -8,6 +8,10 @@ class Task(models.Model):
     day_limit = models.DateField(null=True, blank=True, verbose_name="期限日")
     time_limit = models.TimeField(null=True, blank=True, verbose_name="時間の期限")
     memo = models.TextField(null=True, blank=True,  verbose_name="補足情報")
+    position = models.IntegerField(default=0, blank=True)
+
+    class Meta:
+        ordering = ['position']
 
     def __str__(self):
         return self.title

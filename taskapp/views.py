@@ -2,8 +2,13 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
+
 from .models import Task
 from .forms import TaskForm
+
+import json
 
 # Create your views here.
 class TaskIndexView(TemplateView):
@@ -14,17 +19,31 @@ class TaskListView(ListView):
     context_object_name = "tasks"
     paginate_by = 5
 
-    def get_queryset(self):
-        return Task.objects.filter(user=self.request.user).order_by('day_limit')
+    def post(self, request):
+        card_text = json.loads(request.POST.get('text'))
+
+        print(card_text, type(card_text))
+
+        for card in card_text:
+            book = get_object_or_404(Task, pk=int(card['pk']))
+            book.position = card['order']
+            book.save()
+            
+            print(card['pk'], card['order'])
+            print('------------------')
+
+        result = f"I'v got: {card_text}"
+        return JsonResponse({'data': result}, status=200)
 
 class TaskMainView(ListView):
     template_name = "taskapp/task_main.html"
     model = Task
     context_object_name = "main_task"
 
+
     def get_queryset(self):
         print(self.context_object_name)
-        return Task.objects.filter(user=self.request.user).order_by('day_limit').first()
+        return Task.objects.filter(user=self.request.user).first()
 
 
 class TaskDetailView(DetailView):

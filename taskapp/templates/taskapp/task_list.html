@@ -3,6 +3,9 @@
 
 {% block custom_css %}
     <link rel="stylesheet" href="{% static 'css/taskapp/task_list.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="{% static 'js/taskapp/sortable.js' %}"></script>
 {% endblock %}
 
 {% block container %}
@@ -11,14 +14,17 @@
         <a class="btn" id="create_btn" href="{% url 'create' %}">新規作成</a>
     {% endif %}
 
-    {% for task in tasks %}
-        <div class="task">
-            <a class="task_title" href="{% url 'detail' task.pk %}">{{ task.title }}</a></br>
-            <p class="task_limit">期限：{{ task.day_limit }}&nbsp{{ task.time_limit }}</p>
-        </div>
-    {% empty %}
-    <h3 id="empty_content">タスクを作成しましょう！！</h3>
-    {% endfor %}
+    {% csrf_token %}
+    <div class="tasks sortable">
+        {% for task in tasks %}
+            <div data-pk='{{ task.id }}' class="task">
+                <a class="task_title" href="{% url 'detail' task.pk %}">{{ task.title }}</a></br>
+                <p class="task_limit">期限：{{ task.day_limit }}&nbsp{{ task.time_limit }}</p>
+            </div>
+        {% empty %}
+        <h3 id="empty_content">タスクを作成しましょう！！</h3>
+        {% endfor %}
+    </div>
 
     {% comment %} ↓pagenation実装↓ {% endcomment %}
     <nav class="page_navigation">
